@@ -1,0 +1,62 @@
+<div id="vm-status" class="well">
+  {{#if instances}}
+    {{#each instances}}
+      <div class="instance-info {{ status }}">
+        <div class="actions pull-right">
+          {{#if ready}}
+            <a href="http://{{hostname}}:8000/guacamole" class="btn" target="_blank">Remote Desktop</a>
+            <a href="#connectionInfo" data-toggle="modal" class="btn">SSH</a>
+          
+            <div id="connectionInfo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">SSH connection info</h3>
+              </div>
+              <div class="modal-body">
+                <p>Connect via the console with:</p>
+                <p><code>ssh ubuntu@{{ hostname }}</code></p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+              </div>
+            </div>
+            <a class="btn btn-danger shut-down" data-ami="{{ id }}">
+                Shut down
+            </a>
+          {{/if}}
+        </div>
+  
+      </div>
+    {{/each}}
+  {{else}}
+    {{#currentLab}}
+      <div class="actions pull-right">
+        <a class="btn btn-primary launch" data-ami="{{ ami }}" data-volume="{{ dataVolume}}">Launch</a>
+      </div>
+    {{/currentLab}}  
+  {{/if}}
+
+  <ul class="status-items unstyled inline">
+    {{#currentLab}}
+      <li><h4>{{ name }}</h4></li>
+    {{/currentLab}}
+    {{#if instances}}
+      {{#each instances}}
+        {{#unless ready}}
+          <li>
+            <div class="progress progress-striped active {{#if stopping}}progress-danger{{/if}}">
+              <div class="bar" style="width: {{ progress }}%;"><span>{{ status }}</span></div>
+            </div>
+          </li>
+
+          <!--
+          <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Your instance is starting up. Once it's ready, you'll be able to connect to it.
+          </div>
+          -->
+        {{/unless}}
+      {{/each}}
+    {{/if}}
+  <ul>
+</div>

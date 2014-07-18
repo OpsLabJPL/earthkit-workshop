@@ -1,0 +1,45 @@
+EarthKit Workshop Front End
+
+Copyright © 2013-2014 California Institute of Technology. ALL RIGHTS 
+RESERVED. United States Government Sponsorship Acknowledged. Any 
+commercial use must be negotiated with with Office of Technology 
+Transfer at the California Institute of Technology. This software may 
+be subject to U.S. export control laws. By accepting this software, 
+the user agrees to comply with all applicable U.S. export laws and 
+regulations. User has the responsibility to obtain export licenses, 
+or other export authority as may be required before exporting such 
+information to foreign countries or providing access to foreign 
+persons. Neither the name of Caltech nor its operating division, the
+Jet Propulsion Laboratory, nor the names of its contributors may be
+used to endorse or promote products derived from this software 
+without specific prior written permission.
+
+This product includes JQuery. JQuery is distributed as open source software
+under the MIT license. For details see https://github.com/jquery/jquery.
+
+This product includes JQuery-Cookie. JQuery-Cookie is distributed as open source
+software under the MIT license. For details see
+https://github.com/carhartl/jquery-cookie.
+
+This product includes Twitter Bootstrap. Twitter Bootstrap is distributed as
+open source software under the MIT license. For details see
+https://github.com/twbs/bootstrap.
+
+This product includes Miso Dataset. Miso Dataset is distributed as open source
+softare under the MIT license. For details see
+https://github.com/misoproject/dataset.
+
+This product includes Handlebars.js. Handlebars.js is distributed as open source
+software under the MIT license. For details see 
+https://github.com/wycats/handlebars.js.
+
+This product includes JS-Signals. JS-Signals is distributed as open source
+software under the MIT license. For details see
+https://github.com/millermedeiros/js-signals.
+
+This product includes JQuery-Hashchange. JQuery-Hashchange is distributed as
+open source software under the MIT license. For details see
+https://github.com/cowboy/jquery-hashchange.
+
+This product includes components of Tty.js. Tty.js is distributed as open source
+software under the MIT license. For details see https://github.com/chjj/tty.js.

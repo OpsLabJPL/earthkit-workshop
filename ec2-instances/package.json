@@ -1,0 +1,11 @@
+{
+  "name": "node-vm-tools",
+  "version": "0.0.1",
+  "author": "Jesse Kriss <sjesse.kriss@jpl.nasa.gov>",
+  "description": "Tools for fancy web-enabled tricks",
+  "dependencies" : {
+    "express":  "*",
+    "socket.io":  "*",
+    "pty.js":  "*"
+  }
+}

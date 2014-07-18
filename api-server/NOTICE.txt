@@ -1,0 +1,63 @@
+EarthKit Workshop API Server
+
+Copyright © 2013-2014 California Institute of Technology. ALL RIGHTS
+RESERVED. United States Government Sponsorship Acknowledged. Any
+commercial use must be negotiated with with Office of Technology
+Transfer at the California Institute of Technology. This software may
+be subject to U.S. export control laws. By accepting this software,
+the user agrees to comply with all applicable U.S. export laws and
+regulations. User has the responsibility to obtain export licenses,
+or other export authority as may be required before exporting such
+information to foreign countries or providing access to foreign
+persons. Neither the name of Caltech nor its operating division, the
+Jet Propulsion Laboratory, nor the names of its contributors may be
+used to endorse or promote products derived from this software
+without specific prior written permission.
+
+This product includes Shotgun. Shotgun is distributed as open source software
+under the MIT license. For details see https://github.com/rtomayko/shotgun.
+
+This product includes Sinatra. Sinatra is distributed as open source software
+under the MIT license. For details see https://github.com/sinatra/sinatra.
+
+This product includes SinatraWebsocket. SinatraWebsocket is distributed as open
+source software under the MIT license. For details see
+https://github.com/simulacre/sinatra-websocket.
+
+This product includes Sinatra Cross Origin. Sinatra Cross Origin is distributed
+as open soruce software under the MIT license. For details see
+https://github.com/britg/sinatra-cross_origin.
+
+This product includes Thin. Thin is distributed as open source software under
+the Ruby license. For more details see https://github.com/macournoyer/thin.
+
+This product includes YAJL-Ruby. YAJL-Ruby is distributed as open source
+software under the MIT license. For details see
+https://github.com/brianmario/yajl-ruby.
+
+This product includes the Amazon Web Services (AWS) SDK for Ruby. The AWS SDK
+for Ruby is distributed as open source software under the Apache 2.0 license.
+For details see http://aws.amazon.com/sdkforruby.
+
+This product includes Redis-rb. Redis-rb is distributed as open source software
+under the MIT license. For details see https://github.com/redis/redis-rb.
+
+This product includes Hiredis-rb. Hiredis-rb is distributed as open source
+software under the BSD license. For details see
+https://github.com/pietern/hiredis-rb.
+
+This product includes Rack::SSL. Rack::SSL is distributed as open source
+software under the MIT license. For details see
+https://github.com/josh/rack-ssl.git.
+
+This product includes Bcrypt-ruby. Bcrypt-ruby is distributed as open source
+software under the MIT license. For details see
+https://github.com/codahale/bcrypt-ruby.
+
+This product includes UUIDTools. UUIDTools is distributed as open source
+software under the Apache 2.0 license. For details see
+https://github.com/sporkmonger/uuidtools.
+
+This product includes Trollop. Trollop is distributed as open source software
+under the Ruby license. For details see
+http://trollop.rubyforge.org/ and http://rubydoc.info/gems/trollop/2.0/frames.

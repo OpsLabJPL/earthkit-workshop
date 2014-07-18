@@ -1,0 +1,10 @@
+<user-mapping>
+    <!-- Per-user authentication and config information -->
+    <authorize username="ubuntu" password="2de97ac5a398784a2fa3b3ba867dd390" encoding="md5">
+        <protocol>vnc</protocol>
+        <param name="hostname">localhost</param>
+        <param name="port">5901</param>
+        <param name="password">cescre</param>
+        <param name="encodings">zrle ultra copyrect hextile zlib corre rre raw</param>
+    </authorize>
+</user-mapping>

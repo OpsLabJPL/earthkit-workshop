@@ -1,0 +1,65 @@
+<div class="row-fluid">
+
+    <div id="lab-content" class="span6">
+      <div class="row-fluid">
+
+
+        <div class="span10">
+          {{#each steps}}
+            <div class="step-{{ index }} step-title">
+              <h1>{{ stepNumber }}</h1>
+            </div>
+          {{/each}}
+        </div>
+
+        <div class="span2">
+
+          <div class="btn-group step-chooser">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="current-step">{{ currentStep }}</span> <span class="total-steps">/ {{ totalSteps }} </span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right">
+              {{#each steps}}
+              <li><a href="#/labs/{{ ../id }}/steps/{{ index }}">{{ stepNumber }} {{ stepTitle }}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+      {{#each steps}}
+        <div id="step-{{ index }}" class="step">
+
+          <p>{{{ content }}}</p>
+          
+          <div class="steps-buttons">
+            {{#if nextStep}}
+              <a class="btn btn-primary next" href="#/labs/{{ ../../id }}/steps/{{ nextStep }}">Next step</a>
+            {{else}}
+              <a class="btn btn-success done" href="#">You're done! Pick another lab.</a>
+            {{/if}}
+          </div>
+        </div>
+
+      {{/each}}
+    </div>
+
+    <div class="span6">
+      <div id="console-container"></div>
+    </div>
+  </div>
+
+<!-- dummy elements for tty font metrics -->
+<span id="monospace-width-model" class="font-model">AAAAAAAA</span>
+<div id="monospace-height-model" class="terminal font-model">
+  <div>A</div>
+  <div>A</div>
+  <div>A</div>
+  <div>A</div>
+  <div>A</div>
+  <div>A</div>
+  <div>A</div>
+  <div>A</div>
+</div>

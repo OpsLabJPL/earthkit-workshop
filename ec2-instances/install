@@ -1,0 +1,45 @@
+#!/bin/bash
+
+echo "Installing upstart scripts..."
+cp /usr/local/cescre/upstart/*.conf /etc/init/
+
+echo "Installing required packages..."
+add-apt-repository -y ppa:guacamole/stable
+apt-get install -y tomcat7 guacd libguac5 libguac-client-vnc0 tightvncserver xfce4 build-essential
+
+echo "Fixing XFCE4 / VNC tab key quirk..."
+# Fix found here:  http://ubuntuforums.org/archive/index.php/t-1771058.html
+sed -i 's/<property name="\&lt;Super\&gt;Tab" type="string" value="switch_window_key"\/>/<property name="\&lt;Super\&gt;Tab" type="empty"\/>/g' /home/ubuntu/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+chown ubuntu:ubuntu /home/ubuntu/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+
+echo
+echo "Installing guacamole tomcat servlet..."
+mkdir /etc/guacamole
+mkdir /usr/share/tomcat7/.guacamole
+cp guacamole/user-mapping.xml /etc/guacamole/
+ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat7/.guacamole/
+ln -s $(pwd)/guacamole-0.8.3.war /var/lib/tomcat7/webapps/guacamole.war
+cp tomcat7/server.xml /etc/tomcat7/
+
+echo "Downloading node-v0.10.20..."
+BUILD_DIR=$(mktemp -d)
+pushd $BUILD_DIR &> /dev/null
+curl http://nodejs.org/dist/v0.10.20/node-v0.10.20.tar.gz | tar -xz
+pushd node-v0.10.20 &> /dev/null
+echo "Compiling node-v0.10.20..."
+./configure
+make
+make install
+popd &> /dev/null
+popd &> /dev/null
+
+echo "Installing dependencies for tty.js..."
+su -c 'npm install' ubuntu
+
+echo
+echo "Copying vnc settings to /home/ubuntu/.vnc/ ..."
+cp -R vnc /home/ubuntu/.vnc
+su ubuntu -c 'echo -e "cescre\ncescre" | vncpasswd &> /dev/null'
+chown ubuntu:ubuntu -R /home/ubuntu/.vnc
+
+echo "Done."

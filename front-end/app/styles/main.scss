@@ -1,0 +1,187 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+body {
+}
+
+.navbar-inner .brand {
+  margin-left: 0;
+}
+
+#vm-status {
+  .actions {
+    margin-top: -5px;
+  }
+  .alert {
+    width: 80%;
+  }
+
+  .status-items {
+    margin: 0;
+    li {
+      vertical-align: middle;
+    }
+    h4 {
+      margin: 0;
+    }
+  }
+  
+  .progress {
+    width: 200px;
+    display: inline-block;
+    margin: 0;
+    .bar {
+      text-align: left;
+      padding-left: 10px;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .description {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .compute-time {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  /*
+  .actions {
+    margin-top: 15px;
+    float: right;
+  }
+  */
+
+}
+
+#lab-list-container {
+  
+  margin-top: 60px;
+  text-align: center;
+  
+  .lab-list {
+
+    display: inline-block;
+    text-align: left;
+    
+    .loading {
+      opacity: 0.5;
+    }
+
+    .lab-image {
+      width: 100%;
+      height: 250px;
+      background-size: 100%;
+    }
+
+    li {
+      width: 300px;
+      min-height: 465px;
+    }
+  }
+
+  .caption {
+    p {
+      height: 3em;
+    }
+  }
+}
+
+#current-lab {
+
+  .step-chooser {
+  
+    margin-top: 20px;
+    
+    &.btn-group > .btn, .btn-group > .btn:first-child {
+      border-radius: 20px;
+    }
+    
+    .caret {
+      border-top-color: #aaa;
+    }
+    
+    .current-step {
+      font-weight: bold;
+    }
+
+    .total-steps {
+      color: #aaa;
+      margin-right: 3px;
+    }  
+  }
+
+  .steps-buttons {
+    margin: 30px 0;
+    
+    .done:after {
+      content: ' \2714';
+      font-size: 1.5em;
+    }
+  }
+
+}
+
+#lab-content {
+  padding: 0 20px;
+  position: absolute;
+  bottom: 0;
+  top: 145px;
+  left: 0;
+  width: 50%;
+  overflow: auto;
+}
+
+.font-model {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  visibility: hidden;
+  font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+}
+
+#console {
+  background: #333;
+  color: #ddd;
+  position: absolute;
+  bottom: 0;
+  top: 145px;
+  right: 0;
+  left: 50%;
+  margin-left: 10px;
+  padding: 15px;
+  overflow: auto;
+
+  .terminal * {
+    background: #333;
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+  }
+
+  .reverse-video {
+    background: #888;
+  }
+}
+/* never show console on the lab list page */
+body.lab-list #console {
+  display: none !important;
+}
+
+/* logo */
+#logo {
+  position: absolute;
+  left: 1px;
+  top: 2px;
+  height: 39px;
+  border-right: 1px solid #eee;
+}
+
+.navbar-inner .brand {
+  margin-left: 30px;
+}
